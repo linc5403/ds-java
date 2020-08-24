@@ -23,6 +23,16 @@ public class MyLinkedList {
         return t;
     }
 
+    Integer getFirst() {
+        Node p = get(0);
+        return p.data;
+    }
+
+    Integer getLast() {
+        Node p = get(size-1);
+        return p.data;
+    }
+
     void print() {
         Node t = head;
         while(t != null) {
@@ -56,6 +66,64 @@ public class MyLinkedList {
         }
     }
 
+    void addFirst(Integer elem) {
+        add(0, elem);
+    }
 
-    
+    void addLast(Integer elem) {
+        add(size, elem);
+    }
+
+    Integer remove(int index) {
+        if (index < 0 || index > size) {
+            // 超出链表的边界
+            System.out.println("index " + index + " out of bound " + size);
+            // 此处不规范，应当抛出异常
+            return -1;
+        } else {
+            Integer r;
+            if (index == 0) {
+                r = head.data;
+                head = head.next;
+            } else {
+                Node pre = get(index-1);
+                r = pre.next.data;
+                pre.next = pre.next.next;
+            }
+            size--;
+            return r;
+        }
+    }
+
+    Integer removeFirst() {
+        return remove(0);
+    }
+
+    Integer removeLast() {
+        return remove(size-1);
+    }
+
+    void push(Integer elem) {
+        addFirst(elem);
+    }
+
+    Integer pop() {
+        return removeFirst();
+    }
+
+    Integer peek() {
+        return getFirst();
+    }
+
+    boolean isEmpty() {
+        return size == 0;
+    }
+
+    void enqueue(Integer elem) {
+        addLast(elem);
+    }
+
+    Integer dequeue() {
+        return removeFirst();
+    }
 }

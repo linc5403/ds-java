@@ -7,8 +7,11 @@ import java.util.Queue;
 public class Main {
 
     public static void main(String[] args) {
-	    // write your code here
-        // ArrayList<Integer> a;
+        MyArrayList l = new MyArrayList();
+
+
+
+        /*
         MyArrayList l = new MyArrayList();
         System.out.println(l.capacity);
 
@@ -35,5 +38,6 @@ public class Main {
         for(Integer i : l.data)
             System.out.print(" " + i);
 
+         */
     }
 }
