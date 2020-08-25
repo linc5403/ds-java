@@ -4,6 +4,10 @@ public class MyHashTable {
     class Node {
         Student data;
         Node next;
+
+        Node(Student s) {
+            data = s;
+        }
     }
 
     Node [] table;
