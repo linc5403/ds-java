@@ -1,17 +1,19 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        Animal a = new Animal("大毛");
-        System.out.println(a.name);
-        Animal b = new Animal("小毛", 3);
-        System.out.println(b.name);
-        Animal c = new Animal();
-
-        a.eat();
-        b.eat();
-        c.eat();
+        /*
+        Solution s = new Solution();
+        System.out.println( s.isAnagram("aabb", "abab"));;
+        */
+        ListDemo demo = new ListDemo();
+        List<Integer> l = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        // List<Integer> l = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        demo.test(l);
     }
 }
